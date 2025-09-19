@@ -5,3 +5,6 @@ import random
 import sys
 
 df = pd.read_csv('train.csv')
+text = " ".join(df['text'].dropna().astype(str)).lower()
+
+print(f"Total characters in text: `{len(text)}`")
